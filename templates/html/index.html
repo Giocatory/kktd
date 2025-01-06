@@ -1,0 +1,1513 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}"> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <header class="header-burger">
+                <div class="header-burger__l w-full lg:py-5 flex items-center justify-between">
+                    <div class="flex items-center justify-between">
+                        <div class="logo">
+                            <svg width="154" height="75" viewBox="0 0 154 75" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M67.1562 52.5C65.4927 52.0891 63.1953 52.1672 62 52.5V19C70.25 19 74.375 21.0623 78.5 25.187C82.625 21.0623 85.7188 19 95 19V44.4688C92.7656 44.297 89.3281 43.9533 85.2031 45.5C82.1117 46.6592 71.6367 50.2452 70.7656 42.4065C70.1354 36.7351 79.5312 34.6728 84.6875 37.7663"
+                                    stroke="#F4F4F4" stroke-width="3" stroke-linecap="round" />
+                                <path
+                                    d="M80.2075 31.5011C80.1097 34.9018 79.8549 43.5291 79.5698 51.3065C79.4272 55.195 79.2769 58.8723 79.1349 61.5779C79.0639 62.9303 78.9948 64.0423 78.9296 64.8172C78.897 65.2039 78.8651 65.5111 78.8337 65.7237C78.8182 65.8285 78.8017 65.9188 78.7832 65.9864C78.7744 66.0183 78.7616 66.059 78.7418 66.0966C78.7321 66.1149 78.7141 66.1455 78.684 66.1747C78.6535 66.2041 78.5911 66.25 78.4998 66.25C78.4086 66.25 78.3462 66.2041 78.3157 66.1747C78.2856 66.1455 78.2675 66.1149 78.2579 66.0966C78.2381 66.059 78.2253 66.0183 78.2165 65.9864C78.198 65.9188 78.1814 65.8285 78.166 65.7237C78.1346 65.5111 78.1027 65.2039 78.0701 64.8172C78.0049 64.0423 77.9358 62.9303 77.8648 61.5779C77.7228 58.8723 77.5726 55.195 77.4301 51.3065C77.1449 43.5291 76.8903 34.9018 76.7925 31.5011C76.7648 30.5377 77.5389 29.75 78.5 29.75C79.4611 29.75 80.2352 30.5377 80.2075 31.5011Z"
+                                    fill="#FFF" stroke="#FFF" stroke-width="0.5" />
+                                <circle cx="77.5" cy="37.5" r="36" stroke="#F4F4F4" stroke-width="3" />
+                                <path d="M113.517 64.033C128.161 49.3883 128.161 25.6447 113.517 11" stroke="#F4F4F4"
+                                    stroke-width="3" stroke-linecap="round" />
+                                <path
+                                    d="M124.033 39C123.481 39 123.033 38.5523 123.033 38C123.033 37.4477 123.481 37 124.033 37V39ZM153.367 38C153.367 40.9455 150.979 43.3333 148.033 43.3333C145.088 43.3333 142.7 40.9455 142.7 38C142.7 35.0545 145.088 32.6667 148.033 32.6667C150.979 32.6667 153.367 35.0545 153.367 38ZM124.033 37H148.033V39H124.033V37Z"
+                                    fill="#F9F9F9" />
+                                <path d="M40.5166 64.033C25.8719 49.3883 25.8719 25.6447 40.5166 11" stroke="#F4F4F4"
+                                    stroke-width="3" stroke-linecap="round" />
+                                <path
+                                    d="M30 39C30.5523 39 31 38.5523 31 38C31 37.4477 30.5523 37 30 37V39ZM0.666667 38C0.666667 40.9455 3.05448 43.3333 6 43.3333C8.94552 43.3333 11.3333 40.9455 11.3333 38C11.3333 35.0545 8.94552 32.6667 6 32.6667C3.05448 32.6667 0.666667 35.0545 0.666667 38ZM30 37H6V39H30V37Z"
+                                    fill="#F9F9F9" />
+                            </svg>
+                        </div>
+
+                        <div class="burger" id="burger">
+                            <span></span>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-expand-none" id="menu-1">
+                        <ul class="flex gap-7 text-sm">
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">Колледж</button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">Курсы</button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">Дополнительные курсы</button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">Компаниям</button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="links flex gap-4 text-sm">
+                        <div class="other-links flex gap-4">
+                            <a href="" class="underline">+8 (800) 555-35-35</a>
+                            <a href=""><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M23.6709 3.42904C24.5909 3.42904 25.3372 2.68287 25.3372 1.76237C25.3372 0.84187 24.5909 0.0957031 23.6709 0.0957031C22.7502 0.0957031 22.0039 0.84187 22.0039 1.76237C22.0039 2.68287 22.7502 3.42904 23.6709 3.42904Z"
+                                        fill="#E8E8E8" />
+                                    <path
+                                        d="M18.7197 3.42969H0.670898V22.9035H5.6944V16.568H15.3204L19.7124 22.9035H25.3374L20.4944 16.5389C21.9986 16.3054 23.0814 15.7505 23.7432 14.8747C24.4049 13.9989 24.7359 12.5974 24.7359 10.7289V9.26902C24.7359 8.15952 24.6157 7.28369 24.4051 6.61219C24.1944 5.94069 23.8334 5.35669 23.3221 4.83119C22.7806 4.33485 22.1791 3.98452 21.4571 3.75102C20.7351 3.54669 19.8326 3.42969 18.7197 3.42969ZM17.9076 12.2764H5.6944V7.72152H17.9076C18.5992 7.72152 19.0806 7.83819 19.3212 8.04269C19.5619 8.24702 19.7124 8.62652 19.7124 9.18135V10.8164C19.7124 11.4002 19.5619 11.7797 19.3212 11.984C19.0806 12.1884 18.5994 12.276 17.9076 12.276V12.2764Z"
+                                        stroke="#E8E8E8" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <a href=""><svg width="27" height="23" viewBox="0 0 27 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.8897 0.654297C24.8816 0.654297 24.8736 0.654491 24.8655 0.65488C24.614 0.667039 24.3674 0.728036 24.1393 0.834396L2.30972 9.25446L2.30971 9.25443L2.30432 9.25658C1.89985 9.41801 1.56572 9.60736 1.31905 9.82415C1.07606 10.0377 0.878159 10.3147 0.843202 10.649C0.806113 11.0036 0.963602 11.3057 1.19758 11.5233C1.42107 11.7312 1.72695 11.8786 2.07081 11.9794L7.52143 13.7031C7.63537 13.7409 7.75634 13.7528 7.87552 13.7379C7.99551 13.7229 8.11058 13.6811 8.21222 13.6156L19.4041 6.55469L10.95 14.1893C10.8639 14.2573 10.7933 14.343 10.743 14.4409C10.6874 14.5492 10.6584 14.6692 10.6584 14.791C10.6584 14.9127 10.6874 15.0327 10.743 15.1411C10.798 15.2481 10.8773 15.3407 10.9746 15.4113L19.8459 21.9632C19.863 21.9758 19.8809 21.9873 19.8995 21.9976C20.4783 22.3204 21.1061 22.4719 21.6678 22.2184C22.231 21.9642 22.5415 21.3874 22.6855 20.6976C22.6856 20.6972 22.6857 20.6968 22.6858 20.6964L26.4038 3.1726C26.5754 2.47193 26.5197 1.84837 26.2276 1.37862C25.9271 0.895298 25.4242 0.654297 24.8897 0.654297Z"
+                                        stroke="#E8E8E8" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="language" id="menu-2">
+                            <button class="dropdown-toggle flex items-center" type="button" aria-haspopup="true"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <a href="" class="flex gap-2"><svg width="22" height="21" viewBox="0 0 22 21"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11 20.5C16.5228 20.5 21 16.0228 21 10.5C21 4.97715 16.5228 0.5 11 0.5C5.47715 0.5 1 4.97715 1 10.5C1 16.0228 5.47715 20.5 11 20.5Z"
+                                            stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M1 10.5H21" stroke="#F4F4F4" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                        </path>
+                                        <path
+                                            d="M11 0.5C13.5013 3.23835 14.9228 6.79203 15 10.5C14.9228 14.208 13.5013 17.7616 11 20.5C8.49872 17.7616 7.07725 14.208 7 10.5C7.07725 6.79203 8.49872 3.23835 11 0.5Z"
+                                            stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    Русский</a>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Русский</a>
+                                <a class="dropdown-item" href="#">English</a>
+                                <a class="dropdown-item" href="#">繁體中文</a>
+                            </div>
+                        </div>
+
+                        <div class="d-lg-none divide-x-1 divide-black" id="language">
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="" class="flex gap-2 text-xs ">
+                                        <svg width="15" height="14" viewBox="0 0 22 21" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11 20.5C16.5228 20.5 21 16.0228 21 10.5C21 4.97715 16.5228 0.5 11 0.5C5.47715 0.5 1 4.97715 1 10.5C1 16.0228 5.47715 20.5 11 20.5Z"
+                                                stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                            <path d="M1 10.5H21" stroke="#F4F4F4" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                            </path>
+                                            <path
+                                                d="M11 0.5C13.5013 3.23835 14.9228 6.79203 15 10.5C14.9228 14.208 13.5013 17.7616 11 20.5C8.49872 17.7616 7.07725 14.208 7 10.5C7.07725 6.79203 8.49872 3.23835 11 0.5Z"
+                                                stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg>
+                                        <span>
+                                            Русский
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="" class="flex">
+                                        <span class="text-xs">English</span>
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="" class="flex">
+                                        <span class="text-xs">繁體中文</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="row ">
+                    <div class="col-lg-6 mb-12">
+                        <h1 class="font-bold">
+                            Инновационный Казанский Колледж
+                        </h1>
+                        <p class="tech-design text-xl font-semibold underline">технологии и дизайна</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form relative">
+                            <div class="relative flex w-full items-center">
+                                <svg class="decor decor__l" width="102" height="627" viewBox="0 0 102 627" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="66" cy="591" r="34.5" stroke="#F9F9F9" stroke-width="3" />
+                                    <circle cx="66" cy="36" r="34.5" stroke="#F9F9F9" stroke-width="3" />
+                                    <circle cx="19" cy="19" r="17.5" transform="matrix(1 0 0 -1 47 610)"
+                                        stroke="#F9F9F9" stroke-width="3" />
+                                    <circle cx="19" cy="19" r="17.5" transform="matrix(1 0 0 -1 47 55)" stroke="#F9F9F9"
+                                        stroke-width="3" />
+                                    <path d="M32 591L32 36" stroke="#F9F9F9" stroke-width="3" stroke-linecap="round" />
+                                    <path
+                                        d="M0.666674 376C0.666675 378.946 3.05449 381.333 6.00001 381.333C8.94553 381.333 11.3333 378.946 11.3333 376C11.3333 373.054 8.94553 370.667 6.00001 370.667C3.05449 370.667 0.666674 373.054 0.666674 376ZM0.666667 194C0.666667 196.946 3.05448 199.333 6 199.333C8.94552 199.333 11.3333 196.946 11.3333 194C11.3333 191.054 8.94552 188.667 6 188.667C3.05448 188.667 0.666666 191.054 0.666667 194ZM7.00001 376L7 194L5 194L5.00001 376L7.00001 376Z"
+                                        fill="#F9F9F9" />
+                                </svg>
+
+                                <article class="relative w-full flex flex-column gap-7">
+                                    <header class="flex flex-column gap-1.5">
+                                        <h2 class="uppercase text-3xl font-semibold">оставить заявку</h2>
+                                        <p class="text-xl">Сделаем все в лучшем виде</p>
+                                    </header>
+                                    <form action="" class="flex flex-column gap-2.5">
+                                        <input type="text" placeholder="Ваше имя">
+                                        <input type="tel" placeholder="Ваш телефон">
+                                        <input type="email" placeholder="EMAIL">
+                                        <label class="flex items-start lg:items-center gap-2.5" for="">
+                                            <input type="checkbox" class="mt-1">
+                                            <p class="font-medium tracking-widest">Я согласен(а) и принимаю условия <br>Политики конфиденциальности
+                                            </p>
+                                        </label>
+                                        <div class="button flex">
+                                            <button class="flex">Отправить</button>
+                                        </div>
+                                    </form>
+                                </article>
+                                <svg class="decor decor__r" width="102" height="627" viewBox="0 0 102 627" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="36" cy="36" r="34.5" transform="matrix(-1 0 0 1 72 555)"
+                                        stroke="#F9F9F9" stroke-width="3" />
+                                    <circle cx="36" cy="36" r="34.5" transform="matrix(-1 0 0 1 72 0)" stroke="#F9F9F9"
+                                        stroke-width="3" />
+                                    <circle cx="36" cy="591" r="17.5" transform="rotate(180 36 591)" stroke="#F9F9F9"
+                                        stroke-width="3" />
+                                    <circle cx="36" cy="36" r="17.5" transform="rotate(180 36 36)" stroke="#F9F9F9"
+                                        stroke-width="3" />
+                                    <path d="M71 591L71 35" stroke="#F9F9F9" stroke-width="3" stroke-linecap="round" />
+                                    <path
+                                        d="M101.333 376C101.333 378.946 98.9455 381.333 96 381.333C93.0545 381.333 90.6667 378.946 90.6667 376C90.6667 373.054 93.0545 370.667 96 370.667C98.9455 370.667 101.333 373.054 101.333 376ZM101.333 194C101.333 196.946 98.9455 199.333 96 199.333C93.0545 199.333 90.6667 196.946 90.6667 194C90.6667 191.054 93.0545 188.667 96 188.667C98.9455 188.667 101.333 191.054 101.333 194ZM95 376L95 194L97 194L97 376L95 376Z"
+                                        fill="#F9F9F9" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <article>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="info-item flex flex-column items-center">
+                                <h3 class="text-3xl font-semibold">
+                                    От 2 до 4 лет
+                                </h3>
+                                <p class="medium text-center">продолжительность обучения в зависимости от выбранного
+                                    курса
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="info-item flex flex-column items-center">
+                                <h3 class="text-3xl font-semibold">
+                                    10 и более
+                                </h3>
+                                <p class="medium text-center">новых, инновационных программ которые откроют вам
+                                    новые двери вашей жизни
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="info-item flex flex-column items-center">
+                                <h3 class="text-3xl font-semibold">
+                                    300+
+                                </h3>
+                                <p class="medium text-center">успешно трудоустроенных студентов в сторонние компании
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </footer>
+    </div>
+
+    <main>
+        <section class="college-welcome">
+            <div class="header-triangles">
+                <div class="triangle"></div>
+                <div class="triangle"></div>
+            </div>
+            <header class="welcome-header flex flex-column items-center justify-center block-color-bg">
+                <h2 class="font-bold text-center">Добро пожаловать в наш колледж!</h2>
+                <p class="font-semibold w-3/6">
+                    Откройте для себя возможности современного образования и комфортную атмосферу
+                    нашего колледжа.
+                </p>
+            </header>
+            <article>
+                <div class="relative flex w-full items-center justify-center">
+
+                    <div class="video-player relative flex justify-center">
+                        <iframe class="video" src="https://vkvideo.ru/video_ext.php?oid=73017524&id=456239051&hd=3&autoplay=0" 
+                                width="1280" height="720" 
+                                allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" 
+                                frameborder="0" 
+                                allowfullscreen 
+                                style="border-radius: 1.5rem;"></iframe>
+                    </div>
+                </div>
+            </article>
+            <footer class="mt-11">
+                <div class="container">
+                    <div class="row lg:divide-x-2 divide-y-2 lg:divide-y-0">
+                        <div class="col-lg-4 py-5 ">
+                            <div class="info-item flex flex-column items-center">
+                                <div class="top">
+                                    <img src="{% static 'imgs/square1.jpg' %}" width="150rem" alt="" style="border-radius: 1.5rem; border: 1px solid #587FCE;">
+                                </div>
+                                <div class="bottom flex flex-column items-center">
+                                    <h3 class="text-sm font-semibold text-center">Опытные преподаватели.</h3>
+                                    <p class="text-xs font-semibold text-center w-9/12">Ведущие специалисты передают знания и практический опыт.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 py-5">
+                            <div class="info-item flex flex-column items-center">
+                                <div class="top">
+                                    <img src="{% static 'imgs/square2.jpg' %}" width="150rem" alt="" style="border-radius: 1.5rem; border: 1px solid #587FCE;">
+                                </div>
+                                <div class="bottom flex flex-column items-center">
+                                    <h3 class="text-sm font-semibold text-center">Современные учебные программы.</h3>
+                                    <p class="text-xs font-semibold text-center w-9/12">Актуальные программы
+                                        соответствуют рынку труда и международным стандартам.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 py-5">
+                            <div class="info-item flex flex-column items-center">
+                                <div class="top">
+                                    <img src="{% static 'imgs/square3.jpg' %}" width="150rem" alt="" style="border-radius: 1.5rem; border: 1px solid #587FCE;">
+                                </div>
+                                <div class="bottom flex flex-column items-center">
+                                    <h3 class="text-sm font-semibold text-center">Современная инфраструктура.</h3>
+                                    <p class="text-xs font-semibold text-center w-9/12">Комфортные аудитории, лаборатории и библиотеки для успешного обучения.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="footer-triangles">
+                <div class="triangle"></div>
+                <div class="triangle"></div>
+            </div>
+        </section>
+        <section class="partner-programs py-20">
+            <div class="container">
+                <div class="flex flex-column gap-32">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="partner-programs__desc relative">
+                                <h2 class="font-semibold lg:font-bold">Партнёрские программы – твой путь к успеху</h2>
+                                <p class="lg:font-medium">Сотрудничаем с ведущими компаниями, чтобы предложить студентам реальные возможности для практики и трудоустройства.
+                                    <br>
+                                    Начните строить свою карьеру уже сегодня!
+                                </p>
+                                <div class="links flex items-center absolute">
+                                    <button>Оставить заявку</button>
+                                    <a href="" class="font-light">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 px-0 px-lg-3">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <iframe class="swiper-slide" src="https://vkvideo.ru/video_ext.php?oid=-59800369&id=456239243&hd=3&autoplay=0" width="1280" height="720" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choose font-semibold flex w-full justify-center">
+                        <h2 class="text-center">Выберите свою будущую профессию</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="professions">
+            <div class="header-triangles">
+                <div class="triangle"></div>
+                <div class="triangle"></div>
+            </div>
+            <div class="container py-14">
+                <header class="flex w-full flex-column items-center">
+                    <h2 class="text-2xl font-semibold text-center">Наш колледж предлагает широкий спектр востребованных специальностей</h2>
+                    <svg class="w-full" height="12" viewBox="0 0 1250 12" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.00429 0.666668C3.05886 0.664299 0.669124 3.05019 0.666754 5.99571C0.664384 8.94123 3.05028 11.331 5.99571 11.3333C8.94127 11.3357 11.331 8.94981 11.3334 6.00429C11.3357 3.05877 8.94985 0.669038 6.00429 0.666668ZM1249 8C1249.55 8.00044 1250 7.55309 1250 7.0008C1250 6.44852 1249.55 6.00044 1249 6L1249 8ZM5.9992 7L1249 8L1249 6L6.00081 5L5.9992 7Z"
+                            fill="#587FCE" />
+                    </svg>
+                </header>
+                <div class="pdapage">
+                    <div class="row gy-5">
+                        <div class="col-lg-4">
+                            <a href="">
+                                <article href="../imgs/d7684246-d0be-4757-a9cd-d69067a6f3e1.jfif" class="relative">
+                                    <header class="relative">
+                                        <div class="type text-sm lg:text-base absolute" style="border: 1.5px solid #587FCE;">Python программист</div>
+                                        <img class="image" src="{% static 'imgs/python-course.jpg' %}" width="150rem" alt="">
+                                    </header>
+                                    <footer class="flex flex-column gap-2.5">
+                                        <div class="author">
+                                            <p class="text-sm">Автор Деркунов М.Ю</p>
+                                        </div>
+                                        <div class="name">
+                                            <h3 class="text-base lg:text-xl font-semibold">Обучение языку программирования с самых основ до профессионального уровня
+                                            </h3>
+                                        </div>
+                                        <div class="meta flex items-center gap-4 text-sm lg:text-base">
+                                            <div class="time flex items-center gap-2">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M6.66667 0C3 0 0 3 0 6.66667C0 10.3333 3 13.3333 6.66667 13.3333C10.3333 13.3333 13.3333 10.3333 13.3333 6.66667C13.3333 3 10.3333 0 6.66667 0ZM9.46667 9.46667L6 7.33333V3.33333H7V6.8L10 8.6L9.46667 9.46667Z"
+                                                        fill="#102254" />
+                                                </svg>
+                                                <p>5 - 6 Недель</p>
+                                            </div>
+                                            <div class="students flex items-center gap-2">
+                                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.33317 6.78667V9.45333L7.99984 12L12.6665 9.45333V6.78667L7.99984 9.33333L3.33317 6.78667ZM7.99984 0L0.666504 4L7.99984 8L13.9998 4.72667V9.33333H15.3332V4L7.99984 0Z"
+                                                        fill="#102254" />
+                                                </svg>
+                                                <p>156 Студентов</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="bottom flex justify-between text-sm lg:text-lg">
+                                            <div class="cost flex gap-2">
+                                                <p class="font-medium">₽30 000</p>
+                                                <!-- <p class="line-through">₽30 000</p> -->
+                                                <!-- <p class="font-medium">Бесплатно</p> -->
+                                            </div>
+                                            <p class="font-medium">Подробнее</p>
+                                        </div>
+                                    </footer>
+                                </article>
+                            </a>
+                        </div>
+                        <div class="col-lg-4">
+                            <a href="">
+                                <article href="../imgs/d7684246-d0be-4757-a9cd-d69067a6f3e1.jfif" class="relative">
+                                    <header class="relative">
+                                        <div class="type text-sm lg:text-base absolute" style="border: 1.5px solid #587FCE;">DataScience инженер</div>
+                                        <img class="image" src="{% static 'imgs/ds-course.jpeg' %}" width="150rem" alt="">
+                                    </header>
+                                    <footer class="flex flex-column gap-2.5">
+                                        <div class="author">
+                                            <p class="text-sm">Автор Деркунов М.Ю</p>
+                                        </div>
+                                        <div class="name">
+                                            <h3 class="text-base lg:text-xl font-semibold">Обучение созданию нейронных сетей, сбор и анализ больших данных, интеграция в бизнес
+                                            </h3>
+                                        </div>
+                                        <div class="meta flex items-center gap-4 text-sm lg:text-base">
+                                            <div class="time flex items-center gap-2">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M6.66667 0C3 0 0 3 0 6.66667C0 10.3333 3 13.3333 6.66667 13.3333C10.3333 13.3333 13.3333 10.3333 13.3333 6.66667C13.3333 3 10.3333 0 6.66667 0ZM9.46667 9.46667L6 7.33333V3.33333H7V6.8L10 8.6L9.46667 9.46667Z"
+                                                        fill="#102254" />
+                                                </svg>
+                                                <p>18 - 20 Недель</p>
+                                            </div>
+                                            <div class="students flex items-center gap-2">
+                                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.33317 6.78667V9.45333L7.99984 12L12.6665 9.45333V6.78667L7.99984 9.33333L3.33317 6.78667ZM7.99984 0L0.666504 4L7.99984 8L13.9998 4.72667V9.33333H15.3332V4L7.99984 0Z"
+                                                        fill="#102254" />
+                                                </svg>
+                                                <p>156 Студентов</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="bottom flex justify-between text-sm lg:text-lg">
+                                            <div class="cost flex gap-2">
+                                                <p class="font-medium">₽80 000</p>
+                                                <!-- <p class="line-through">₽30 000</p> -->
+                                                <!-- <p class="font-medium">Бесплатно</p> -->
+                                            </div>
+                                            <p class="font-medium">Подробнее</p>
+                                        </div>
+                                    </footer>
+                                </article>
+                            </a>
+                        </div>
+                        <div class="col-lg-4">
+                            <a href="">
+                                <article href="../imgs/d7684246-d0be-4757-a9cd-d69067a6f3e1.jfif" class="relative">
+                                    <header class="relative">
+                                        <div class="type text-sm lg:text-base absolute" style="border: 1.5px solid #587FCE;">Computer Vision разработчик</div>
+                                        <img class="image" src="{% static 'imgs/cv-course.jpg' %}" width="150rem" alt="">
+                                    </header>
+                                    <footer class="flex flex-column gap-2.5">
+                                        <div class="author">
+                                            <p class="text-sm">Автор Деркунов М.Ю</p>
+                                        </div>
+                                        <div class="name">
+                                            <h3 class="text-base lg:text-xl font-semibold">Обучение специалистов для разработки и реализации алгоритмов в области компьютерного зрения
+                                            </h3>
+                                        </div>
+                                        <div class="meta flex items-center gap-4 text-sm lg:text-base">
+                                            <div class="time flex items-center gap-2">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M6.66667 0C3 0 0 3 0 6.66667C0 10.3333 3 13.3333 6.66667 13.3333C10.3333 13.3333 13.3333 10.3333 13.3333 6.66667C13.3333 3 10.3333 0 6.66667 0ZM9.46667 9.46667L6 7.33333V3.33333H7V6.8L10 8.6L9.46667 9.46667Z"
+                                                        fill="#102254" />
+                                                </svg>
+                                                <p>18 - 20 Недель</p>
+                                            </div>
+                                            <div class="students flex items-center gap-2">
+                                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.33317 6.78667V9.45333L7.99984 12L12.6665 9.45333V6.78667L7.99984 9.33333L3.33317 6.78667ZM7.99984 0L0.666504 4L7.99984 8L13.9998 4.72667V9.33333H15.3332V4L7.99984 0Z"
+                                                        fill="#102254" />
+                                                </svg>
+                                                <p>156 Студентов</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="bottom flex justify-between text-sm lg:text-lg">
+                                            <div class="cost flex gap-2">
+                                                <p class="font-medium">₽80 000</p>
+                                                <!-- <p class="line-through">₽30 000</p> -->
+                                                <!-- <p class="font-medium">Бесплатно</p> -->
+                                            </div>
+                                            <p class="font-medium">Подробнее</p>
+                                        </div>
+                                    </footer>
+                                </article>
+                            </a>
+                        </div>
+                        <div class="col-lg-4">
+                            <a href="">
+                                <article href="../imgs/d7684246-d0be-4757-a9cd-d69067a6f3e1.jfif" class="relative">
+                                    <header class="relative">
+                                        <div class="type text-sm lg:text-base absolute" style="border: 1.5px solid #587FCE;">GPT Ассистенты</div>
+                                        <img class="image" src="{% static 'imgs/gpt-course.jpg' %}" width="150rem" alt="">
+                                    </header>
+                                    <footer class="flex flex-column gap-2.5">
+                                        <div class="author">
+                                            <p class="text-sm">Автор Деркунов М.Ю</p>
+                                        </div>
+                                        <div class="name">
+                                            <h3 class="text-base lg:text-xl font-semibold">Профессиональное использование GPT для себя, своей компании и создание собственных нейро-сотрудников
+                                            </h3>
+                                        </div>
+                                        <div class="meta flex items-center gap-4 text-sm lg:text-base">
+                                            <div class="time flex items-center gap-2">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M6.66667 0C3 0 0 3 0 6.66667C0 10.3333 3 13.3333 6.66667 13.3333C10.3333 13.3333 13.3333 10.3333 13.3333 6.66667C13.3333 3 10.3333 0 6.66667 0ZM9.46667 9.46667L6 7.33333V3.33333H7V6.8L10 8.6L9.46667 9.46667Z"
+                                                        fill="#102254" />
+                                                </svg>
+                                                <p>8 - 9 Недель</p>
+                                            </div>
+                                            <div class="students flex items-center gap-2">
+                                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.33317 6.78667V9.45333L7.99984 12L12.6665 9.45333V6.78667L7.99984 9.33333L3.33317 6.78667ZM7.99984 0L0.666504 4L7.99984 8L13.9998 4.72667V9.33333H15.3332V4L7.99984 0Z"
+                                                        fill="#102254" />
+                                                </svg>
+                                                <p>156 Студентов</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="bottom flex justify-between text-sm lg:text-lg">
+                                            <div class="cost flex gap-2">
+                                                <p class="font-medium">₽80 000</p>
+                                                <!-- <p class="line-through">₽30 000</p> -->
+                                                <!-- <p class="font-medium">Бесплатно</p> -->
+                                            </div>
+                                            <p class="font-medium">Подробнее</p>
+                                        </div>
+                                    </footer>
+                                </article>
+                            </a>
+                        </div>
+                        <div class="col-lg-4">
+                            <a href="">
+                                <article href="../imgs/d7684246-d0be-4757-a9cd-d69067a6f3e1.jfif" class="relative">
+                                    <header class="relative">
+                                        <div class="type text-sm lg:text-base absolute" style="border: 1.5px solid #587FCE;">Machine Learning разработчик</div>
+                                        <img class="image" src="{% static 'imgs/ml-course.jpg' %}" width="150rem" alt="">
+                                    </header>
+                                    <footer class="flex flex-column gap-2.5">
+                                        <div class="author">
+                                            <p class="text-sm">Автор Деркунов М.Ю</p>
+                                        </div>
+                                        <div class="name">
+                                            <h3 class="text-base lg:text-xl font-semibold">Вы получите навыки в области ML, BigData, контейнеризации и потоковой обработки данных
+                                            </h3>
+                                        </div>
+                                        <div class="meta flex items-center gap-4 text-sm lg:text-base">
+                                            <div class="time flex items-center gap-2">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M6.66667 0C3 0 0 3 0 6.66667C0 10.3333 3 13.3333 6.66667 13.3333C10.3333 13.3333 13.3333 10.3333 13.3333 6.66667C13.3333 3 10.3333 0 6.66667 0ZM9.46667 9.46667L6 7.33333V3.33333H7V6.8L10 8.6L9.46667 9.46667Z"
+                                                        fill="#102254" />
+                                                </svg>
+                                                <p>18 - 20 Недель</p>
+                                            </div>
+                                            <div class="students flex items-center gap-2">
+                                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.33317 6.78667V9.45333L7.99984 12L12.6665 9.45333V6.78667L7.99984 9.33333L3.33317 6.78667ZM7.99984 0L0.666504 4L7.99984 8L13.9998 4.72667V9.33333H15.3332V4L7.99984 0Z"
+                                                        fill="#102254" />
+                                                </svg>
+                                                <p>156 Студентов</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="bottom flex justify-between text-sm lg:text-lg">
+                                            <div class="cost flex gap-2">
+                                                <p class="font-medium">₽80 000</p>
+                                                <!-- <p class="line-through">₽30 000</p> -->
+                                                <!-- <p class="font-medium">Бесплатно</p> -->
+                                            </div>
+                                            <p class="font-medium">Подробнее</p>
+                                        </div>
+                                    </footer>
+                                </article>
+                            </a>
+                        </div>
+                        <div class="col-lg-4">
+                            <a href="">
+                                <article href="../imgs/d7684246-d0be-4757-a9cd-d69067a6f3e1.jfif" class="relative">
+                                    <header class="relative">
+                                        <div class="type text-sm lg:text-base absolute" style="border: 1.5px solid #587FCE;">WEB FullStack разработчик</div>
+                                        <img class="image" src="{% static 'imgs/fs-course.jpg' %}" width="150rem" alt="">
+                                    </header>
+                                    <footer class="flex flex-column gap-2.5">
+                                        <div class="author">
+                                            <p class="text-sm">Автор Деркунов М.Ю</p>
+                                        </div>
+                                        <div class="name">
+                                            <h3 class="text-base lg:text-xl font-semibold">Освоите все необходимые навыки для backend и frontend, овладеете Git, Docker, GitHub, PostgreSQL, Nginx, и др.
+                                            </h3>
+                                        </div>
+                                        <div class="meta flex items-center gap-4 text-sm lg:text-base">
+                                            <div class="time flex items-center gap-2">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M6.66667 0C3 0 0 3 0 6.66667C0 10.3333 3 13.3333 6.66667 13.3333C10.3333 13.3333 13.3333 10.3333 13.3333 6.66667C13.3333 3 10.3333 0 6.66667 0ZM9.46667 9.46667L6 7.33333V3.33333H7V6.8L10 8.6L9.46667 9.46667Z"
+                                                        fill="#102254" />
+                                                </svg>
+                                                <p>10 - 12 Недель</p>
+                                            </div>
+                                            <div class="students flex items-center gap-2">
+                                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.33317 6.78667V9.45333L7.99984 12L12.6665 9.45333V6.78667L7.99984 9.33333L3.33317 6.78667ZM7.99984 0L0.666504 4L7.99984 8L13.9998 4.72667V9.33333H15.3332V4L7.99984 0Z"
+                                                        fill="#102254" />
+                                                </svg>
+                                                <p>156 Студентов</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="bottom flex justify-between text-sm lg:text-lg">
+                                            <div class="cost flex gap-2">
+                                                <p class="font-medium">₽50 000</p>
+                                                <!-- <p class="line-through">₽30 000</p> -->
+                                                <!-- <p class="font-medium">Бесплатно</p> -->
+                                            </div>
+                                            <p class="font-medium">Подробнее</p>
+                                        </div>
+                                    </footer>
+                                </article>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-triangles">
+                <div class="triangle"></div>
+                <div class="triangle"></div>
+            </div>
+        </section>
+
+        <section class="success">
+            <div class="container">
+                <div class="flex flex-column items-center justify-center text-center">
+                    <h1 class="text-2xl lg:text-3xl font-bold">Начните свой путь к успеху <span class="underline">прямо сейчас!</span></h1>
+                    <p class="lg:w-3/6 font-medium mt-3.5">Подайте заявку на поступление и откройте для себя новые возможности. Станьте востребованным специалистом с современным образованием.</p>
+                    <div class="actions flex text-white">
+                        <button class="text-sm font-semibold lg:text-base lg:font-bold">подать заявку</button>
+                        <a class="text-sm font-semibold lg:text-base lg:font-bold" href="">Узнать больше -></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="advantages">
+            <div class="header-triangles">
+                <div class="triangle"></div>
+                <div class="triangle"></div>
+            </div>
+            <div class="container py-14">
+                <header>
+                    <h2 class="text-2xl lg:text-3xl flex justify-start text-center font-bold">Мы создаем профессионалов!
+                    </h2>
+                    <p class="lg:w-4/6 font-semibold text-sm lg:text-base mt-3.5">Наш колледж стремится не только дать
+                        знания,
+                        но и заложить прочный
+                        фундамент для вашей будущей карьеры. Мы уделяем
+                        особое внимание развитию практических навыков, поддержке индивидуальных талантов и созданию
+                        условий, в которых каждый
+                        студент сможет реализовать свои амбиции. Ваше будущее — наша главная забота!</p>
+                </header>
+                <div class="row gy-5">
+                    <div class="col-lg-4">
+                        <div class="flex flex-column gap-11 items-center lg:items-start">
+                            <div class="icon">
+                            </div>
+                            <div class="advantages__item-desc">
+                                <h3 class="font-semibold">Современные учебные программы</h3>
+                                <p class="font-medium">Актуальные знания и навыки, соответствующие современным
+                                    требованиям рынка
+                                    труда.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="advantage__item- flex flex-column gap-11 items-center lg:items-start">
+                            <div class="icon">
+                            </div>
+                            <div class="advantages__item-desc">
+                                <h3 class="font-semibold">Современные учебные программы</h3>
+                                <p class="font-medium">Актуальные знания и навыки, соответствующие современным
+                                    требованиям рынка
+                                    труда.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="advantage__item flex flex-column gap-11 items-center lg:items-start">
+                            <div class="icon">
+                            </div>
+                            <div class="advantages__item-desc">
+                                <h3 class="font-semibold">Современные учебные программы</h3>
+                                <p class="font-medium">Актуальные знания и навыки, соответствующие современным
+                                    требованиям рынка
+                                    труда.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-triangles">
+                <div class="triangle"></div>
+                <div class="triangle"></div>
+            </div>
+        </section>
+        <section class="college-staff text-white">
+            <div class="container py-14">
+                <header class="flex flex-column items-center text-center mb-20">
+                    <h2 class="text-2xl lg:text-4xl font-bold">Коллектив колледжа</h2>
+                    <p class="lg:w-2/5 text-sm font-medium mt-3.5">Состав нашего колледжа — это команда профессионалов,
+                        увлечённых своим
+                        делом и
+                        готовых делиться
+                        знаниями и
+                        опытом с
+                        каждым студентом.</p>
+                    <svg class="w-full" height="12" viewBox="0 0 598 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.666667 6C0.666667 8.94552 3.05448 11.3333 6 11.3333C8.94552 11.3333 11.3333 8.94552 11.3333 6C11.3333 3.05448 8.94552 0.666667 6 0.666667C3.05448 0.666667 0.666667 3.05448 0.666667 6ZM586.667 6C586.667 8.94552 589.054 11.3333 592 11.3333C594.945 11.3333 597.333 8.94552 597.333 6C597.333 3.05448 594.945 0.666667 592 0.666667C589.054 0.666667 586.667 3.05448 586.667 6ZM6 7H592V5H6V7Z"
+                            fill="#AAE0FF" />
+                    </svg>
+                </header>
+                <div class="staff">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <article class="flex flex-column items-center gap-4">
+                                <div class="photo rounded-full">
+                                </div>
+                                <div class="flex flex-column gap-4">
+                                    <div class="text-center">
+                                        <h3 class="font-bold">Даутов Иркек Фаритович</h3>
+                                        <p class="text-sm font-medium">Директор</p>
+                                    </div>
+                                    <div class="flex gap-3 justify-center">
+                                        <div class="bg-white"></div>
+                                        <div class="bg-white"></div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-3">
+                            <article class="flex flex-column items-center gap-4">
+                                <div class="photo rounded-full">
+                                </div>
+                                <div class="flex flex-column gap-4">
+                                    <div class="text-center">
+                                        <h3 class="font-bold">Даутов Иркек Фаритович</h3>
+                                        <p class="text-sm font-medium">Директор</p>
+                                    </div>
+                                    <div class="flex gap-3 justify-center">
+                                        <div class="bg-white"></div>
+                                        <div class="bg-white"></div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-3">
+                            <article class="flex flex-column items-center gap-4">
+                                <div class="photo rounded-full">
+                                </div>
+                                <div class="flex flex-column gap-4">
+                                    <div class="text-center">
+                                        <h3 class="font-bold">Даутов Иркек Фаритович</h3>
+                                        <p class="text-sm font-medium">Директор</p>
+                                    </div>
+                                    <div class="flex gap-3 justify-center">
+                                        <div class="bg-white"></div>
+                                        <div class="bg-white"></div>
+
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-3">
+                            <article class="flex flex-column items-center gap-4">
+                                <div class="photo rounded-full">
+                                </div>
+                                <div class="flex flex-column gap-4">
+                                    <div class="text-center">
+                                        <h3 class="font-bold">Даутов Иркек Фаритович</h3>
+                                        <p class="text-sm font-medium">Директор</p>
+                                    </div>
+                                    <div class="flex gap-3 justify-center">
+                                        <div class="bg-white"></div>
+                                        <div class="bg-white"></div>
+
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="student-comfort">
+            <div class="header-triangles">
+                <div class="triangle"></div>
+                <div class="triangle"></div>
+            </div>
+            <div class="container py-14">
+                <header class="w-full flex justify-center">
+                    <svg width="103" height="87" viewBox="0 0 103 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M60.8496 85.0334C37.9206 62.1044 37.9206 24.929 60.8496 2" stroke="#587FCE"
+                            stroke-width="3" stroke-linecap="round" />
+                        <path
+                            d="M44 45C44.5523 45 45 44.5523 45 44C45 43.4477 44.5523 43 44 43V45ZM0.666667 44C0.666667 46.9455 3.05448 49.3333 6 49.3333C8.94552 49.3333 11.3333 46.9455 11.3333 44C11.3333 41.0545 8.94552 38.6667 6 38.6667C3.05448 38.6667 0.666667 41.0545 0.666667 44ZM44 43H6V45H44V43Z"
+                            fill="#587FCE" />
+                    </svg>
+                    <div class="flex flex-column items-center text-center gap-0.5 mb-12">
+                        <p class="text-xs lg:text-base font-medium underline">Комфорт и уют для студентов.</p>
+                        <h2 class="text-2xl lg:text-4xl font-bold">Комфорт и уют для студентов.</h2>
+                        <p class="text-sm lg:text-base font-medium lg:w-9/12">Наше общежитие создано для того, чтобы
+                            студенты
+                            чувствовали себя
+                            комфортно и безопасно.</p>
+                    </div>
+                    <svg width="102" height="87" viewBox="0 0 102 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M41.5176 85.0334C64.4466 62.1044 64.4466 24.929 41.5176 2" stroke="#587FCE"
+                            stroke-width="3" stroke-linecap="round" />
+                        <path
+                            d="M58.3672 45C57.8149 45 57.3672 44.5523 57.3672 44C57.3672 43.4477 57.8149 43 58.3672 43V45ZM101.701 44C101.701 46.9455 99.3127 49.3333 96.3672 49.3333C93.4217 49.3333 91.0339 46.9455 91.0339 44C91.0339 41.0545 93.4217 38.6667 96.3672 38.6667C99.3127 38.6667 101.701 41.0545 101.701 44ZM58.3672 43H96.3672V45H58.3672V43Z"
+                            fill="#587FCE" />
+                    </svg>
+
+                </header>
+                <article class="mb-12">
+                    <div class="block"></div>
+                </article>
+                <div class="row gy-5">
+                    <div class="col-lg-4">
+                        <div class="flex gap-3">
+                            <div class="square"></div>
+                            <p class="text-sm">
+                                <span class="font-bold">Комфортабельные комнаты.</span> Удобные и светлые комнаты,
+                                оборудованные всем
+                                необходимым для жизни и учебы.
+                        </div>
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="flex gap-3">
+                            <div class="square"></div>
+                            <p class="text-sm">
+                                <span class="font-bold">Безопасность.</span> Круглосуточная охрана и видеонаблюдение
+                                обеспечивают спокойствие и защиту.
+                        </div>
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="flex gap-3">
+                            <div class="square"></div>
+                            <p class="text-sm">
+                                <span class="font-bold">Развитая инфраструктура.</span> Спортивные площадки, зоны
+                                отдыха, прачечные, кухни и МИКРОВОЛНОВКА — всё для вашего комфорта.
+                        </div>
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="flex gap-3">
+                            <div class="square"></div>
+                            <p class="text-sm">
+                                <span class="font-bold">Доступ к интернету.</span>Бесплатный Wi-Fi на всей территории
+                                общежития для удобного доступа к образовательным ресурсам.
+                        </div>
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="flex gap-3">
+                            <div class="square"></div>
+                            <p class="text-sm">
+                                <span class="font-bold">Социальная жизнь.</span> Регулярные мероприятия и встречи
+                                способствуют знакомствам и дружбе между студентами.
+                        </div>
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="flex gap-3">
+                            <div class="square"></div>
+                            <p class="text-sm">
+                                <span class="font-bold">Благоустроенная территория.</span> Зелёные зоны для прогулок и
+                                отдыха создают приятную атмосферу и способствуют расслаблению.
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-triangles">
+                <div class="triangle"></div>
+                <div class="triangle"></div>
+            </div>
+        </section>
+        <section class="faq">
+            <div class="container py-36">
+                <div class="flex flex-column gap-20 white">
+                    <header>
+                        <h2 class="font-bold text-4xl">Часто задаваемые вопросы</h2>
+                    </header>
+                    <article class="flex flex-column gap-8">
+                        <div class="accordion">
+                            <details class="accordion__details" name="faq">
+                                <summary class="font-bold accordion__summary">
+                                    <span class="accordion__title" role="term" aria-details="faq-1">
+                                        <p class="w-11/12">
+                                            Как подать документы на поступление?
+                                        </p>
+                                    </span>
+                                </summary>
+                            </details>
+                            <div class="acccordion__content" id="faq-1" role="definition">
+                                <div class="accordion__content-body">
+                                    <p class="pt-2.5">Наш колледж предлагает разнообразные специальности, связанные с
+                                        информационными
+                                        технологиями, такими как
+                                        программирование, разработка игр, информационная безопасность, сетевые
+                                        технологии,
+                                        интернет-маркетинг, графический
+                                        дизайн, тестирование ПО, администрирование баз данных, управление проектами и
+                                        искусственный интеллект.
+                                        Более подробно можно посмотреть здесь.</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="accordion">
+                            <details class="accordion__details" name="faq">
+                                <summary class="font-bold accordion__summary">
+                                    <span class="accordion__title" role="term" aria-details="faq-1">
+                                        <p class="w-11/12">
+                                            Какие специальности предлагает колледж?
+                                        </p>
+                                    </span>
+                                </summary>
+                            </details>
+                            <div class="acccordion__content" id="faq-1" role="definition">
+                                <div class="accordion__content-body">
+                                    <p class="pt-2.5">Наш колледж предлагает разнообразные специальности, связанные с
+                                        информационными
+                                        технологиями, такими как
+                                        программирование, разработка игр, информационная безопасность, сетевые
+                                        технологии,
+                                        интернет-маркетинг, графический
+                                        дизайн, тестирование ПО, администрирование баз данных, управление проектами и
+                                        искусственный интеллект.
+                                        Более подробно можно посмотреть здесь.</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="accordion">
+                            <details class="accordion__details" name="faq">
+                                <summary class="font-bold accordion__summary">
+                                    <span class="accordion__title" role="term" aria-details="faq-1">
+                                        <p class="w-11/12">
+                                            Сколько стоит обучение?
+                                        </p>
+                                    </span>
+                                </summary>
+                            </details>
+                            <div class="acccordion__content" id="faq-1" role="definition">
+                                <div class="accordion__content-body">
+                                    <p class="pt-2.5">Наш колледж предлагает разнообразные специальности, связанные с
+                                        информационными
+                                        технологиями, такими как
+                                        программирование, разработка игр, информационная безопасность, сетевые
+                                        технологии,
+                                        интернет-маркетинг, графический
+                                        дизайн, тестирование ПО, администрирование баз данных, управление проектами и
+                                        искусственный интеллект.
+                                        Более подробно можно посмотреть здесь.</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="accordion">
+                            <details class="accordion__details" name="faq">
+                                <summary class="font-bold accordion__summary">
+                                    <span class="accordion__title" role="term" aria-details="faq-1">
+                                        <p class="w-11/12">
+                                            Какие вступительные экзамены нужно сдавать?
+                                        </p>
+                                    </span>
+                                </summary>
+                            </details>
+                            <div class="acccordion__content" id="faq-1" role="definition">
+                                <div class="accordion__content-body">
+                                    <p class="pt-2.5">Наш колледж предлагает разнообразные специальности, связанные с
+                                        информационными
+                                        технологиями, такими как
+                                        программирование, разработка игр, информационная безопасность, сетевые
+                                        технологии,
+                                        интернет-маркетинг, графический
+                                        дизайн, тестирование ПО, администрирование баз данных, управление проектами и
+                                        искусственный интеллект.
+                                        Более подробно можно посмотреть здесь.</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="accordion">
+                            <details class="accordion__details" name="faq">
+                                <summary class="font-bold accordion__summary">
+                                    <span class="accordion__title" role="term" aria-details="faq-1">
+                                        <p class="w-11/12">
+                                            Предоставляется ли общежитие для иногородних студентов?
+                                        </p>
+                                    </span>
+                                </summary>
+                            </details>
+                            <div class="acccordion__content" id="faq-1" role="definition">
+                                <div class="accordion__content-body">
+                                    <p class="pt-2.5">Наш колледж предлагает разнообразные специальности, связанные с
+                                        информационными
+                                        технологиями, такими как
+                                        программирование, разработка игр, информационная безопасность, сетевые
+                                        технологии,
+                                        интернет-маркетинг, графический
+                                        дизайн, тестирование ПО, администрирование баз данных, управление проектами и
+                                        искусственный интеллект.
+                                        Более подробно можно посмотреть здесь.</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="accordion">
+                            <details class="accordion__details" name="faq">
+                                <summary class="font-bold accordion__summary">
+                                    <span class="accordion__title" role="term" aria-details="faq-1">
+                                        <p class="w-11/12">
+                                            Какие возможности для практики и стажировок предоставляет колледж?
+                                        </p>
+                                    </span>
+                                </summary>
+                            </details>
+                            <div class="acccordion__content" id="faq-1" role="definition">
+                                <div class="accordion__content-body">
+                                    <p class="pt-2.5">Наш колледж предлагает разнообразные специальности, связанные с
+                                        информационными
+                                        технологиями, такими как
+                                        программирование, разработка игр, информационная безопасность, сетевые
+                                        технологии,
+                                        интернет-маркетинг, графический
+                                        дизайн, тестирование ПО, администрирование баз данных, управление проектами и
+                                        искусственный интеллект.
+                                        Более подробно можно посмотреть здесь.</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="accordion">
+                            <details class="accordion__details" name="faq">
+                                <summary class="font-bold accordion__summary">
+                                    <span class="accordion__title" role="term" aria-details="faq-1">
+                                        <p class="w-11/12">
+                                            Какие дополнительные курсы и мероприятия проводятся в колледже?
+                                        </p>
+                                    </span>
+                                </summary>
+                            </details>
+                            <div class="acccordion__content" id="faq-1" role="definition">
+                                <div class="accordion__content-body">
+                                    <p class="pt-2.5">Наш колледж предлагает разнообразные специальности, связанные с
+                                        информационными
+                                        технологиями, такими как
+                                        программирование, разработка игр, информационная безопасность, сетевые
+                                        технологии,
+                                        интернет-маркетинг, графический
+                                        дизайн, тестирование ПО, администрирование баз данных, управление проектами и
+                                        искусственный интеллект.
+                                        Более подробно можно посмотреть здесь.</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="accordion">
+                            <details class="accordion__details" name="faq">
+                                <summary class="font-bold accordion__summary">
+                                    <span class="accordion__title" role="term" aria-details="faq-1">
+                                        <p class="w-11/12">
+                                            Как проходит процесс трудоустройства выпускников?
+                                        </p>
+                                    </span>
+                                </summary>
+                            </details>
+                            <div class="acccordion__content" id="faq-1" role="definition">
+                                <div class="accordion__content-body">
+                                    <p class="pt-2.5">Наш колледж предлагает разнообразные специальности, связанные с
+                                        информационными
+                                        технологиями, такими как
+                                        программирование, разработка игр, информационная безопасность, сетевые
+                                        технологии,
+                                        интернет-маркетинг, графический
+                                        дизайн, тестирование ПО, администрирование баз данных, управление проектами и
+                                        искусственный интеллект.
+                                        Более подробно можно посмотреть здесь.</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="accordion">
+                            <details class="accordion__details" name="faq">
+                                <summary class="font-bold accordion__summary">
+                                    <span class="accordion__title" role="term" aria-details="faq-1">
+                                        <p class="w-11/12">
+                                            Какие документы выдаются по окончании обучения?
+                                        </p>
+                                    </span>
+                                </summary>
+                            </details>
+                            <div class="acccordion__content" id="faq-1" role="definition">
+                                <div class="accordion__content-body">
+                                    <p class="pt-2.5">Наш колледж предлагает разнообразные специальности, связанные с
+                                        информационными
+                                        технологиями, такими как
+                                        программирование, разработка игр, информационная безопасность, сетевые
+                                        технологии,
+                                        интернет-маркетинг, графический
+                                        дизайн, тестирование ПО, администрирование баз данных, управление проектами и
+                                        искусственный интеллект.
+                                        Более подробно можно посмотреть здесь.</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="accordion">
+                            <details class="accordion__details" name="faq">
+                                <summary class="font-bold accordion__summary">
+                                    <span class="accordion__title" role="term" aria-details="faq-1">
+                                        <p class="w-11/12">
+                                            Какие меры безопасности принимаются в колледже?
+                                        </p>
+                                    </span>
+                                </summary>
+                            </details>
+                            <div class="acccordion__content" id="faq-1" role="definition">
+                                <div class="accordion__content-body">
+                                    <p class="pt-2.5">Наш колледж предлагает разнообразные специальности, связанные с
+                                        информационными
+                                        технологиями, такими как
+                                        программирование, разработка игр, информационная безопасность, сетевые
+                                        технологии,
+                                        интернет-маркетинг, графический
+                                        дизайн, тестирование ПО, администрирование баз данных, управление проектами и
+                                        искусственный интеллект.
+                                        Более подробно можно посмотреть здесь.</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="footer-triangles">
+                <div class="triangle"></div>
+                <div class="triangle"></div>
+            </div>
+        </section>
+        <section class="form-map">
+            <div class="py-12 lg:px-12">
+                <div class="container relative">
+                    <div class="row flex-column-reverse flex-lg-row">
+                        <div class="col-lg-6">
+                            <div class="form relative flex flex-column gap-14 mt-0 justify-center items-center
+                                mt-12">
+                                <svg class="w-full white" width="560" height="12" viewBox="0 0 560 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6 0.666667C3.05444 0.666667 0.666626 3.05448 0.666626 6C0.666626 8.94552 3.05444 11.3333 6 11.3333C8.9455 11.3333 11.3333 8.94552 11.3333 6C11.3333 3.05448 8.9455 0.666667 6 0.666667ZM554 0.666667C551.054 0.666667 548.667 3.05448 548.667 6C548.667 8.94552 551.054 11.3333 554 11.3333C556.946 11.3333 559.333 8.94552 559.333 6C559.333 3.05448 556.946 0.666667 554 0.666667ZM6 7L554 7V5L6 5V7Z"
+                                        fill="#F9F9F9" />
+                                </svg>
+                                <svg class="w-3/6 lg:w-full white" width="424" height="2" viewBox="0 0 424 2"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.999999 1L423 1" stroke="#F9F9F9" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                                <div class="relative flex w-full items-center">
+                                    <svg class="decor decor__l" width="72" height="628" viewBox="0 0 72 628" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="36" cy="591.5" r="34.5" stroke="#F9F9F9" stroke-width="3" />
+                                        <circle cx="36" cy="36.5" r="34.5" stroke="#F9F9F9" stroke-width="3" />
+                                        <circle cx="19" cy="19" r="17.5" transform="matrix(1 0 0 -1 17 610.5)"
+                                            stroke="#F9F9F9" stroke-width="3" />
+                                        <circle cx="19" cy="19" r="17.5" transform="matrix(1 0 0 -1 17 55.5)"
+                                            stroke="#F9F9F9" stroke-width="3" />
+                                        <path d="M2.00002 591.5L2 36.5" stroke="#F9F9F9" stroke-width="3"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                    <article class="relative w-full flex flex-column gap-7">
+                                        <header class="flex flex-column gap-1.5">
+                                            <h2 class="uppercase text-3xl font-semibold">оставить заявку</h2>
+                                            <p class="text-xl">Сделаем все в лучшем виде</p>
+                                        </header>
+                                        <form action="" class="flex flex-column gap-2.5">
+                                            <input type="text" placeholder="Ваше имя">
+                                            <input type="tel" placeholder="Ваш телефон">
+                                            <input type="email" placeholder="EMAIL">
+                                            <label class="flex items-start lg:items-center gap-2.5" for="">
+                                                <input type="checkbox" class="mt-1">
+                                                <p class="font-medium tracking-widest">Я согласен(а) и принимаю условия
+                                                    <br>
+                                                    Политики
+                                                    конфиденциальности
+                                                </p>
+                                            </label>
+                                            <div class="button flex">
+                                                <button class="flex">Отправить</button>
+                                            </div>
+                                        </form>
+                                    </article>
+                                    <svg class="decor decor__r" width="73" height="628" viewBox="0 0 73 628" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="36" cy="36" r="34.5" transform="matrix(-1 0 0 1 72 555.5)"
+                                            stroke="#F9F9F9" stroke-width="3" />
+                                        <circle cx="36" cy="36" r="34.5" transform="matrix(-1 0 0 1 72 0.5)"
+                                            stroke="#F9F9F9" stroke-width="3" />
+                                        <circle cx="36" cy="591.5" r="17.5" transform="rotate(180 36 591.5)"
+                                            stroke="#F9F9F9" stroke-width="3" />
+                                        <circle cx="36" cy="36.5" r="17.5" transform="rotate(180 36 36.5)"
+                                            stroke="#F9F9F9" stroke-width="3" />
+                                        <path d="M71 591.5L71 35.5" stroke="#F9F9F9" stroke-width="3"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <svg class="w-3/6 lg:w-full text-white" width="424" height="2" viewBox="0 0 424 2"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.999999 1L423 1" stroke="#F9F9F9" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                                <svg class="w-full text-white" width="560" height="12" viewBox="0 0 560 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6 0.666667C3.05444 0.666667 0.666626 3.05448 0.666626 6C0.666626 8.94552 3.05444 11.3333 6 11.3333C8.9455 11.3333 11.3333 8.94552 11.3333 6C11.3333 3.05448 8.9455 0.666667 6 0.666667ZM554 0.666667C551.054 0.666667 548.667 3.05448 548.667 6C548.667 8.94552 551.054 11.3333 554 11.3333C556.946 11.3333 559.333 8.94552 559.333 6C559.333 3.05448 556.946 0.666667 554 0.666667ZM6 7L554 7V5L6 5V7Z"
+                                        fill="#F9F9F9" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 map px-0 lg:absolute h-full">
+                            <div class="relative h-full overflow-hidden rounded-l-2xl">
+                                <iframe class="w-full"
+                                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Acfd22daebfe3b271fc58e135f48616afab1f85866542fbc1b79ed4c21dcd94f6&amp;source=constructor"
+                                    width="720" height="720" frameborder="0">
+                                </iframe>
+                                <div class="radial"></div>
+                                <div class="circle rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container ">
+            <div class="row white py-12 gap-y-9">
+                <div class="col-lg-3">
+                    <div class="flex flex-column text-center">
+                        <div class="logo flex justify-center">
+                            <svg width="153" height="75" viewBox="0 0 153 75" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M66.6396 52.5C64.9761 52.0891 62.6787 52.1672 61.4834 52.5V19C69.7334 19 73.8584 21.0623 77.9834 25.187C82.1084 21.0623 85.2021 19 94.4834 19V44.4688C92.249 44.297 88.8115 43.9533 84.6865 45.5C81.5951 46.6592 71.1201 50.2452 70.249 42.4065C69.6188 36.7351 79.0146 34.6728 84.1709 37.7663"
+                                    stroke="#F4F4F4" stroke-width="3" stroke-linecap="round" />
+                                <path
+                                    d="M79.6909 31.5011C79.5931 34.9018 79.3383 43.5291 79.0532 51.3065C78.9106 55.195 78.7603 58.8723 78.6183 61.5779C78.5473 62.9303 78.4782 64.0423 78.4129 64.8172C78.3804 65.2039 78.3485 65.5111 78.3171 65.7237C78.3016 65.8285 78.2851 65.9188 78.2666 65.9864C78.2578 66.0183 78.245 66.059 78.2252 66.0966C78.2155 66.1149 78.1975 66.1455 78.1674 66.1747C78.1369 66.2041 78.0745 66.25 77.9832 66.25C77.892 66.25 77.8296 66.2041 77.7991 66.1747C77.769 66.1455 77.7509 66.1149 77.7413 66.0966C77.7215 66.059 77.7087 66.0183 77.6999 65.9864C77.6814 65.9188 77.6648 65.8285 77.6494 65.7237C77.618 65.5111 77.5861 65.2039 77.5535 64.8172C77.4883 64.0423 77.4192 62.9303 77.3482 61.5779C77.2062 58.8723 77.056 55.195 76.9135 51.3065C76.6283 43.5291 76.3736 34.9018 76.2759 31.5011C76.2482 30.5377 77.0223 29.75 77.9834 29.75C78.9445 29.75 79.7186 30.5377 79.6909 31.5011Z"
+                                    fill="#F9F9F9" stroke="#F4F4F4" stroke-width="0.5" />
+                                <circle cx="76.9834" cy="37.5" r="36" stroke="#F4F4F4" stroke-width="3" />
+                                <path d="M113 64.033C127.645 49.3883 127.645 25.6447 113 11" stroke="#F4F4F4"
+                                    stroke-width="3" stroke-linecap="round" />
+                                <path
+                                    d="M123.517 39C122.964 39 122.517 38.5523 122.517 38C122.517 37.4477 122.964 37 123.517 37V39ZM152.85 38C152.85 40.9455 150.462 43.3333 147.517 43.3333C144.571 43.3333 142.183 40.9455 142.183 38C142.183 35.0545 144.571 32.6667 147.517 32.6667C150.462 32.6667 152.85 35.0545 152.85 38ZM123.517 37H147.517V39H123.517V37Z"
+                                    fill="#F9F9F9" />
+                                <path d="M40 64.033C25.3553 49.3883 25.3553 25.6447 40 11" stroke="#F4F4F4"
+                                    stroke-width="3" stroke-linecap="round" />
+                                <path
+                                    d="M29.4834 39C30.0357 39 30.4834 38.5523 30.4834 38C30.4834 37.4477 30.0357 37 29.4834 37V39ZM0.150065 38C0.150065 40.9455 2.53788 43.3333 5.4834 43.3333C8.42892 43.3333 10.8167 40.9455 10.8167 38C10.8167 35.0545 8.42892 32.6667 5.4834 32.6667C2.53788 32.6667 0.150065 35.0545 0.150065 38ZM29.4834 37H5.4834V39H29.4834V37Z"
+                                    fill="#F9F9F9" />
+                            </svg>
+                        </div>
+                        <p class="font-semibold mt-3.5 mb-7">Инновации ведут к успеху.<br>
+                            <span class="underline">Строим ваше будущее вместе.</span>
+                        </p>
+                        <div class="flex items-center justify-center gap-6">
+                            <div class="circle rounded-full"></div>
+                            <div class="circle rounded-full"></div>
+                            <div class="circle rounded-full"></div>
+                            <div class="circle rounded-full"></div>
+                            <div class="circle rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row gap-y-9">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <nav>
+                                        <ul>
+                                            <li>
+                                                <h3>О колледже</h3>
+                                            </li>
+                                            <li>
+                                                <a href="">Миссия и ценности</a>
+                                            </li>
+                                            <li><a href="">Руководство и преподаватели</a></li>
+                                            <li><a href="">Инфраструктура</a></li>
+                                            <li><a href="">Новости</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="col-6">
+                                    <nav>
+                                        <ul>
+                                            <li>
+                                                <h3>Специальности</h3>
+                                            </li>
+                                            <li>
+                                                <a href="">Список направлений</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Практика и стажировки</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Учебный план</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <nav>
+                                        <ul>
+                                            <li>
+                                                <h3>Трудоустройство</h3>
+                                            </li>
+                                            <li>
+                                                <a href="">Сотрудничество с работодателями</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Программы стажировок</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Карьерные перспективы выпускников</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="col-6">
+                                    <nav>
+                                        <ul>
+                                            <li>
+                                                <h3>Обратная связь</h3>
+                                            </li>
+                                            <li>
+                                                <a href="">Контакты</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Форма обратной связи</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Часто задаваемые вопросы</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="h-0.5 bg-white opacity-100">
+            <div class="footer-bottom gap-12 items-center justify-between text-center white py-12">
+                <p>© Инновационный Казанский Колледж, 2025. Все права защищены.</p>
+
+                <div class="language border-2 py-2 px-6 dropdown d-none d-md-block ">
+                    <button class="dropdown-toggle flex items-center" type="button" aria-haspopup="true"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="" class="flex gap-2"><svg width="22" height="21" viewBox="0 0 22 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11 20.5C16.5228 20.5 21 16.0228 21 10.5C21 4.97715 16.5228 0.5 11 0.5C5.47715 0.5 1 4.97715 1 10.5C1 16.0228 5.47715 20.5 11 20.5Z"
+                                    stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M1 10.5H21" stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path
+                                    d="M11 0.5C13.5013 3.23835 14.9228 6.79203 15 10.5C14.9228 14.208 13.5013 17.7616 11 20.5C8.49872 17.7616 7.07725 14.208 7 10.5C7.07725 6.79203 8.49872 3.23835 11 0.5Z"
+                                    stroke="#F4F4F4" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            Русский</a>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Русский</a>
+                        <a class="dropdown-item" href="#">English</a>
+                        <a class="dropdown-item" href="#">繁體中文</a>
+                    </div>
+                </div>
+
+                <div class="d-lg-none grid grid-cols-3 divide-x">
+                    <a href="" class="px-3">
+                        <span>
+                            Русский
+                        </span>
+                    </a>
+                    <a href="">
+                        <span>English</span>
+                    </a>
+                    <a href="">
+                        <span>繁體中文</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/language.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

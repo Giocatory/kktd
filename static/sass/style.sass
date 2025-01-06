@@ -1,0 +1,1085 @@
+$laptop: 1439.98px
+$tablet: 1022.98px
+$mobile: 766.98px
+$mobile-l: 424.98px
+$mobile-s: 319.98px
+
+@mixin laptop
+    @media (min-width: $laptop)
+        @content
+@mixin tablet
+    @media (min-width: $tablet) and (max-width: $laptop)
+        @content
+
+@mixin mobile-s
+    @media (min-width: $mobile-s) and (max-width: $tablet)
+        @content
+
+@mixin mobile-l
+    @media (min-width: $mobile-l) and (max-width: $tablet)
+        @content
+
+*
+    font-family: 'Montserrat'
+    transition: all .3s easy-in-out
+
+@mixin button($bg-color:white , $text-color:white , $padding:10px , $border-radius: 10px)
+    background-color: $bg-color
+    color: $text-color
+    padding: $padding
+    border-radius: $border-radius
+    transition: all 0.3s ease-in-out
+    &:active
+        transition: all 0.1s
+
+@mixin hover
+    @media (hover: hover)
+        &:hover
+            @content
+
+$padding-y: 20px
+$padding-x: 63px
+
+$body-color-bg: #AAE0FF
+.body-color-bg
+    color: $body-color-bg
+
+$block-color-bg: #101E45
+.block-color-bg
+    color: $block-color-bg
+
+$text-color: #587FCE
+.text-color
+    color: $text-color
+
+$white: #F9F9F9
+.white
+    color: $white
+
+$hover-color: #235BCB
+$active-color: #0B3B9B
+
+body
+    overflow-x: hidden !important
+    background: $body-color-bg !important
+
+.main
+    background: url("../imgs/fon.png")
+    width: 100%
+    height: 100%
+    background-size: 100% 100%
+    margin: 0
+    padding-top: 25px
+
+.header-triangles
+    position: relative
+    height: 100px
+    margin-top: -1px
+
+    .triangle
+        position: relative
+        &:nth-child(1)
+            width: 100%
+            height: 500px
+            background: $block-color-bg
+            clip-path: polygon(100% 0, 0 0, 0 20%)
+        &:nth-child(2)
+            top: -500px
+            width: 100%
+            height: 500px
+            background: $text-color
+            clip-path: polygon(100% 0, 0 0, 100% 20%)
+            z-index: -1
+
+.footer-triangles
+    position: relative
+    height: 100px
+    transform: rotate(180deg)
+    margin-bottom: -1px
+
+    .triangle
+        position: relative
+        &:nth-child(1)
+            width: 100%
+            height: 500px
+            background: $block-color-bg
+            clip-path: polygon(100% 0, 0 0, 0 20%)
+        &:nth-child(2)
+            top: -500px
+            width: 100%
+            height: 500px
+            background: $text-color
+            clip-path: polygon(100% 0, 0 0, 100% 20%)
+            z-index: -1
+
+.form
+    width: 75%
+    float: right
+    border-radius: 15px
+    @include mobile-s
+        width: 100%
+
+    .decor
+        position: absolute
+        transform: scale(1)
+        z-index: 1
+        color: $white
+        max-height: 110%
+    .decor__l
+        left: -13%
+        @include mobile-s
+            display: none
+
+    .decor__r
+        right: -13%
+        @include mobile-s
+            display: none
+
+    article
+        background: $white
+        padding: 2rem 3.125rem 4.688rem 3.125rem
+        border-radius: 15px
+        z-index: 2
+        @include mobile-s
+            padding: 15px 1.25rem
+
+        header
+            letter-spacing: .256em
+            @include mobile-s
+                letter-spacing: .07em
+                margin-top: 0
+                gap: 0px
+            h2
+                color: $block-color-bg
+                font-size: clamp(1.875rem, 5vw, 1.25rem)
+            p
+                color: #4E4E4E
+                font-size: clamp(0.875rem, 5vw, 1.25rem)
+
+        form
+            color: $block-color-bg
+            @include mobile-s
+                padding: 0.938rem 0px 0px
+
+            input
+                color: $white
+                background: #587FCE
+                padding: 0.938rem 1.563rem
+                border-radius: 5px
+                font-weight: 300
+
+                &::placeholder
+                    color: $white
+                    font-weight: 300
+                    @include mobile-s
+                        padding: 0.625rem 0
+
+            label
+                font-size: 0.75rem
+                @include mobile-s
+                    align-items: flex-start !important
+                input
+                    width: 35px
+                    height: 35px
+                    border: white
+
+            .button
+                width: 100%
+                justify-content: center
+                text-align: center
+                button
+                    margin-top: .875rem
+                    width: 100%
+                    justify-content: center
+                    @include button(#{$block-color-bg}, #{$white}, 10px 20px, 5px)
+                    @include hover
+                        @include button(#{$hover-color}, #{$white} , 10px 20px ,5px)
+                    &:active
+                        @include button(#{$active-color}, #{$white}, 10px 20px, 5px)
+                    @include mobile-s
+                        @include button(#{$block-color-bg}, #{$white}, 15px 30px, 10px)
+                        margin-bottom: 0
+                        &:active
+                            @include button(#{$active-color}, #{$white}, 15px 30px, 10px)
+                            transition: all .1s
+.main
+    .header
+        padding-top: clamp(5px, 5vw, 10px)
+        padding-bottom: clamp(5px, 5vw, 10px)
+        color: white
+        background: linear-gradient(0deg, rgba(16, 34, 84, 1) 20%, rgba(88, 127, 206, 1) 100%)
+
+        .banner
+            padding-top: clamp(0px, calc(-10px + 1vw), #{$padding-y})
+            padding-right: clamp(5px, calc(-10px + 5vw), #{$padding-x})
+            padding-bottom: clamp(0px, calc(-10px + 1vw), #{$padding-y})
+            padding-left: clamp(5px, calc(-10px + 5vw), #{$padding-x})
+            .col-xs-12
+                &:nth-last-child(2)
+                    .text-xs
+                        font-size: clamp(0.625rem, calc(-10px + 5vw), 0.875rem)
+                        &:nth-last-child(1)
+                            font-size: clamp(0.625rem, calc(-10px + 5vw), 0.75rem)
+                        @include mobile-s
+                            text-align: center
+                &:nth-last-child(1)
+                    p
+                        color: $white
+
+            .col-xs-12
+                .flex
+                    justify-content: flex-end
+                    gap: clamp(0px, 1vw, 15px)
+                    @include mobile-s
+                        justify-content: space-between
+                    .text-sm
+                        font-size: 0.625rem
+                    .diamond
+                        width: 35px
+                        height: 35px
+                        background: $body-color-bg
+                        transform: translate(0, 7%) rotate(45deg)
+                        left: -25px
+                        @include mobile-s
+                            width: 22px
+                            height: 22px
+                            transform: translate(45%, 0%) rotate(45deg)
+
+                    .benefit
+                        padding: 3px 30px
+                        background: #6B9AF7
+                        @include mobile-s
+                            padding: 4px 7px 4px 15px
+
+                    button
+                        @include button(#E67F35, #{$white}, 10px 20px, 5px)
+                        @include hover
+                            @include button(#e96101, #{$white}, 10px 20px, 5px)
+                        &:active
+                            @include button(#eead7e, #{$white}, 10px 20px, 5px)
+
+                        @include mobile-s
+                            @include button(#E67F35, #{$white}, 2px 2px, 5px)
+                            &:active
+                                @include button(#eb904f, #{$white}, 2px 2px, 5px)
+
+    .header-burger
+        padding: 0
+        &.bh-active
+            overflow-y: hidden
+            position: fixed
+            background: white
+            z-index: 10
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
+            transition: .2s ease 0s
+
+        @include mobile-s
+            padding: 25px 0
+
+        .header-burger__l
+            padding-left: clamp(0px, 5vw, #{$padding-x})
+            padding-right: clamp(0px, 5vw, #{$padding-x})
+            @include mobile-s
+                display: block
+
+        .logo
+            color: $white
+            position: relative
+            z-index: 10
+            @include mobile-s
+                zoom: .5
+
+        .burger-t
+            @include mobile-s
+                width: 100%
+                display: flex
+                align-items: center
+                justify-content: space-between
+
+        .burger
+            position: relative
+            display: none
+            width: 30px
+            height: 18px
+            align-items: center
+            z-index: 10
+
+            span
+                height: 2px
+                width: 100%
+                border-radius: 5px
+                background: white
+
+            &::before,
+            &::after
+                content: ''
+                position: absolute
+                height: 2px
+                width: 100%
+                background: white
+                border-radius: 5px
+                transition: all .3s ease 0s
+            &::before
+                top: 0
+            &::after
+                bottom: 0
+
+            &.active
+                span
+                    transform: scale(0)
+                &::before
+                    top: 50%
+                    transform: rotate(-45deg) translate(0, -50%)
+                    background: black
+                &::after
+                    bottom: 50%
+                    transform: rotate(45deg) translate(0, 50%)
+                    background: black
+
+            @include mobile-s
+                display: flex
+
+        nav
+
+            color: $white
+            @include mobile-s
+                display: none
+                padding-top: 30px
+                color: black
+            &.open
+                display: flex !important
+
+            .gap-7
+                @include mobile-s
+                    flex-direction: column
+
+                    padding: 0 20px
+            .dropdown-menu
+
+                @include mobile-s
+                    position: relative
+                    color: black
+                    border: none
+                    a
+                        font-weight: 600
+                    hr
+                        display: none
+            button
+                transition: all .3s
+                color: $white
+                @include mobile-s
+                    font-weight: 900
+                @include mobile-s
+                    color: $block-color-bg
+                @include hover
+                    color: #b6b5b5
+            .dropdown-item
+                @include hover
+                    filter: brightness(80%)
+                    transition: all .15s
+
+        .links
+            color: $white
+            @include mobile-s
+                color: black
+            .other-links
+                a
+                    color: $white
+
+                    @include hover
+                        filter: brightness(80%)
+                        transition: all .15s
+                @include mobile-s
+                    display: none
+            .language
+                position: relative
+                button
+                    @include hover
+                        filter: brightness(80%)
+                        transition: all .15s
+                .dropdown-item
+                    @include hover
+                        filter: brightness(80%)
+                        transition: all .15s
+                @include mobile-s
+                    display: none
+                    position: fixed
+                    left: 0
+                    bottom: 0
+                    justify-content: center
+                    width: 100%
+
+            .d-lg-none
+                @include mobile-s
+                    width: 90%
+                    position: absolute
+                    left: 6%
+                    bottom: 3%
+                    display: none
+
+                &.open
+                    display: block
+
+    .content
+        color: $white
+        .row
+            padding: #{$padding-y} #{$padding-x}
+            @include mobile-s
+                padding: 10px 10px
+
+            h1
+                line-height: 140%
+                font-size: clamp(2rem, 5vw, 4rem)
+
+            .tech-design
+                font-size: (1rem, 5vw, 2rem)
+
+    footer
+        color: $white
+        background: $block-color-bg
+        margin-top: -20px
+
+        article
+            padding: #{$padding-y} #{$padding-x}
+            padding-top: 50px
+            padding-bottom: 50px
+            @include mobile-s
+                padding: 70px 10px 40px
+
+            .course-main
+                display: flex
+                @include mobile-s
+                    flex-direction: column
+
+            .row
+                @include mobile-s
+                    gap: 20px
+                .info-item
+                    gap: 5px
+                    @include mobile-s
+                        align-items: flex-start
+                    p
+                        @include mobile-s
+                            text-align: start !important
+
+.college-welcome
+    header
+        h2
+            font-size: clamp(1.5rem, 5vw, 2rem)
+        p
+            font-size: clamp(1rem, 5vw, 1.25rem)
+            text-align: center
+            line-height: 1.5
+            @include mobile-s
+                width: 100%
+
+    article
+
+        .video-player
+            margin-top: 50px
+            position: relative
+
+            &::before
+                content: ""
+                background: url("../imgs/decor.svg") no-repeat
+                height: 110%
+                width: 100%
+                position: absolute
+                top: -5%
+                left: -5%
+                background-size: contain
+                z-index: -1
+                @include mobile-s
+                    display: none
+
+            &::after
+                content: ""
+                background: url("../imgs/decor.svg") no-repeat
+                position: absolute
+                height: 110%
+                width: 100%
+                transform: rotate(180deg)
+                top: -5%
+                right: -5%
+                background-size: contain
+                z-index: -1
+
+                @include mobile-s
+                    display: none
+
+            .block
+                text-align: center
+                width: clamp(300px, 100vw, 1300px)
+                background: $body-color-bg
+                padding: 20px 35px
+                border-radius: 15px
+                border: 3px solid $text-color
+                border-right: 5px solid $text-color
+                border-left: 5px solid $text-color
+                @include mobile-s
+                    padding: 0px 0px
+                .video
+                    max-width: 100%
+                    height: auto
+                    border-radius: 15px
+                    padding-bottom: 56.25%
+                    background: white
+                    margin: 0 auto
+
+    footer
+        background: none
+        .row
+            h3
+                color: $block-color-bg
+            p
+                color: $text-color
+            .col-lg-4
+                border-color: #587FCE !important
+
+            .info-item
+                gap: 20px
+                .top
+                    .square
+                        width: 35px
+                        height: 35px
+                        border: 3px solid $block-color-bg
+
+.partner-programs
+    color: $white
+    background: $block-color-bg
+    .row
+        padding: 0 110px
+        @include mobile-s
+            padding: 0 0
+
+        h2
+            font-size: clamp(1.5rem, 5vw, 2.5rem)
+        p
+            font-size: clamp(1rem, 5vw, 1.25rem)
+            line-height: 140%
+            letter-spacing: 3px
+            margin: 15px 0 50px
+
+        .links
+            font-size: clamp(1rem, 5vw, 1.25rem)
+            gap: 15px
+            a
+                transition: all .3s
+                @include hover
+                    filter: brightness(80%)
+            button
+                @include button(#{$text-color}, #{$white}, 8px 7px , 5px)
+                @include hover
+                    @include button(#{$hover-color}, #{$white}, 8px 7px , 5px)
+                &:active
+                    @include button(#{$active-color}, #{$white}, 8px 7px , 5px)
+
+            @include mobile-s
+                width: 100%
+                display: flex
+                justify-content: center
+                bottom: -100%
+
+        .swiper
+            width: 100%
+            position: relative
+            aspect-ratio: 16 / 9
+
+            .swiper-slide
+                width: 100%
+                height: auto
+                text-align: center
+                background: none
+                border: 3px solid $white
+                display: flex
+                justify-content: center
+                align-items: center
+
+                img
+                    display: block
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+    .choose
+        h2
+            font-size: clamp(1.5rem, 5vw, 2.25rem)
+            color: $body-color-bg
+
+.professions
+    header
+        h2
+            color: $block-color-bg
+        svg
+            color: $text-color
+    .pdapage
+        position: relative
+        background: $body-color-bg
+        margin-top: 30px
+        padding: 30px 20px
+        border-radius: 20px
+        border: 3px solid $text-color
+        border-bottom: 0
+        @include mobile-s
+            padding: 0
+            border: none
+
+        &::before
+            content: ""
+            background: url("../imgs/decor-half.svg") no-repeat
+            width: 72px
+            height: 500px
+            position: absolute
+            background-size: contain
+            top: -3%
+            left: -3%
+            z-index: -1
+            @include mobile-s
+                width: 0
+
+        &::after
+            content: ""
+            background: url("../imgs/decor-circle.svg")
+            width: 72px
+            height: 72px
+            position: absolute
+            background-size: contain
+            top: -3%
+            right: -3%
+            z-index: -1
+            @include mobile-s
+                width: 0
+
+        article
+            border-radius: 20px
+            overflow: hidden
+            transition: all .2s ease-in-out
+            @include hover
+                transform: scale(1.05)
+                box-shadow: 0px 4px 20px 0px $text-color
+            &:active
+                transform: scale(1.05)
+                box-shadow: 0px 4px 20px 0px $text-color
+            header
+                .type
+                    color: white
+                    top: 5%
+                    left: 5%
+                    transform: translate(-5%, 0%)
+                    background: $block-color-bg
+                    padding: 8px 12px
+                    border-radius: 8px
+                .image
+                    width: 100%
+                    aspect-ratio: 16 / 9
+                    background: $text-color
+            footer
+                background: #F4F4F5
+                padding: 20px
+
+                svg
+                    color: $block-color-bg
+
+                h3
+                    color: $block-color-bg
+                p
+                    color: $block-color-bg
+
+                hr
+                    color: $text-color
+
+                .bottom
+                    .cost
+                        p
+                            color: $text-color
+                    p
+                        color: $block-color-bg
+                        cursor: pointer
+                        transition: all .3s
+                        @include hover
+                            color: #2c2cfc
+
+.success
+    color: $white
+    padding: 40px 0
+    background: $block-color-bg
+    p
+        color: $body-color-bg
+    .actions
+        margin-top: 45px
+        gap: 10px
+        button
+            @include button(#{$text-color}, #{$white}, 15px , 8px)
+            @include hover
+                @include button(#{$hover-color}, #{$white}, 15px , 8px)
+            &:active
+                @include button(#{$active-color}, #{$white}, 15px , 8px)
+            @include mobile-s
+                padding: 10px
+                &:active
+                    @include button(#{$active-color}, #{$white}, 10px , 8px)
+        a
+            color: $white
+            padding: 15px
+            @include hover
+                filter: brightness(80%)
+
+.advantages
+    color: $block-color-bg
+    header
+        margin-bottom: 80px
+
+    .icon
+        width: 64px
+        height: 64px
+        background: $block-color-bg
+
+    .advantages__item-desc
+        p
+            color: $text-color
+        @include mobile-s
+            text-align: center
+
+.college-staff
+    background: $block-color-bg
+    h2
+        color: $white
+    h3
+        color: $white
+    p
+        color: $body-color-bg
+    svg
+        color: $body-color-bg
+
+    .staff
+        position: relative
+        z-index: 2
+        &::before
+            position: absolute
+            content: ""
+            background: url("../imgs/decor-half-staff.svg") no-repeat
+            width: 100%
+            height: 82px
+            top: -11%
+            left: -2%
+            z-index: -1
+            @include mobile-s
+                width: 0
+
+        &::after
+            position: absolute
+            content: ""
+            background: url("../imgs/decor-half-staff.svg") no-repeat
+            transform: scaleX(-1)
+            width: 100%
+            height: 82px
+            top: -11%
+            right: -2%
+            z-index: -1
+            @include mobile-s
+                width: 0
+    .col-lg-3
+        &:nth-last-child(-n+2)
+            article
+                border-radius: 25px 25px 100px 0
+                background: linear-gradient(180deg, $text-color, $block-color-bg) padding-box, linear-gradient(-180deg, $body-color-bg 75%, $block-color-bg) border-box
+    article
+        position: relative
+        background: linear-gradient(180deg, $text-color, $block-color-bg) padding-box, linear-gradient(180deg, $body-color-bg 75%, $block-color-bg ) border-box,
+        border-radius: 25px 25px 0 100px
+        border: 3px solid transparent
+        padding: 45px 50px
+
+        .photo
+            width: 200px
+            height: 200px
+            background: $body-color-bg
+
+        .bg-white
+            width: 16px
+            height: 16px
+
+.student-comfort
+    color: $block-color-bg
+    .header-triangles
+        transform: scaleX(-1)
+    .footer-triangles
+        transform: scale(-1)
+
+    header
+        p
+            color: $text-color
+            &:nth-last-child(1)
+                letter-spacing: 1.2px
+
+        svg
+            color: $text-color
+
+    article
+        .block
+            width: 100%
+            aspect-ratio: 4 / 3
+            max-height: 555px
+            background: linear-gradient(180deg, $text-color 0%, rgba(170, 224, 255, 1) 100%)
+            border-radius: 12px 12px 0px 0px
+            flex-shrink: 0
+            position: relative
+            box-shadow: 0px -6px 8.7px -1px rgba(88, 127, 206, 1)
+
+    .row
+        .square
+            width: 22px
+            height: 22px
+            background: $block-color-bg
+            flex-shrink: 0
+        p
+            letter-spacing: 1.2px
+
+.faq
+    color: $white
+    width: 100%
+    height: 100%
+    background: url("../imgs/fon.png") no-repeat
+    background-size: 100% 100%
+    .footer-triangles
+        transform: scale(-1)
+    .white
+        padding-left: clamp(0px, 5vw, 200px)
+        padding-right: clamp(0px, 5vw, 200px)
+
+        article
+            .accordion__details
+                position: relative
+                &::after
+                    content: ""
+                    cursor: pointer
+                    pointer-events: none
+                    position: absolute
+                    top: 50%
+                    right: 0
+                    transform: translateY(-50%) rotate(45deg)
+                    background: $body-color-bg
+                    width: 1rem
+                    height: 1rem
+                    transition-duration: .3s
+                .accordion__title
+                    width: 100%
+                    display: block
+
+                &[open]
+                    & + .acccordion__content
+                        grid-template-rows: 1fr
+                    &::after
+                        transform: rotate(0deg)
+                        background: $body-color-bg
+                        width: 1rem
+                        height: 0.5rem
+
+                .accordion__summary
+                    list-style: none
+                    transition: all .3s
+                    @include hover
+                        filter: brightness(80%)
+
+            hr
+                color: $body-color-bg
+
+            .acccordion__content
+                display: grid
+                grid-template-rows: 0fr
+                transition-duration: .3s
+                .accordion__content-body
+                    overflow: hidden
+
+.form-map
+    background: $block-color-bg
+    overflow: hidden
+    .form
+        .decor
+            position: absolute
+            transform: scale(1)
+            z-index: 1
+            color: $white
+            max-height: 110%
+        .decor__l
+            left: -5%
+
+        .decor__r
+            right: -5%
+
+    .map
+        right: -4%
+        iframe
+            position: relative
+            height: 100%
+            filter: hue-rotate(-320deg)
+            @include mobile-s
+                height: 100vw
+
+        .radial
+            pointer-events: none
+            position: absolute
+            left: 50%
+            top: 50%
+            width: 100%
+            height: 100%
+            background: radial-gradient(circle, rgba(0, 0, 255, 0), rgba(0, 0, 255, 0.432))
+            transform: translate(-50%, -50%)
+        .circle
+            pointer-events: none
+            position: absolute
+            left: 50%
+            top: 50%
+            min-width: 35vw
+            height: 35vw
+            transform: translate(-50%, -50%)
+            background: 5px solid rgba(0, 0, 255, 0.518)
+            box-shadow: inset 0 0 100px rgba(15, 15, 123, 0.582)
+            @include mobile-s
+                min-width: 75vw
+                min-height: 75vw
+
+footer
+    color: $white
+    background: $block-color-bg
+    .logo
+        color: $white
+
+    .circle
+        width: 35px
+        height: 35px
+        background: $white
+
+    ul
+        display: flex
+        flex-direction: column
+        gap: 25px
+
+        li
+            h3
+                font-weight: 700
+                text-wrap: nowrap
+            a
+                color: $text-color
+                font-weight: 600
+                transition: all .3s
+                @include hover
+                    color: $hover-color
+                &:active
+                    color: $active-color
+
+    .footer-bottom
+        display: flex
+        p
+            color: $text-color
+
+        @include mobile-s
+            flex-direction: column
+
+//// Course  ////
+
+.course-overview
+    .header-triangles
+        transform: scaleX(-1)
+
+    .footer-triangles
+        transform: scaleY(-1)
+
+    header
+        color: $block-color-bg
+
+        svg
+            @include mobile-s
+                display: none
+
+    .row
+        &::before
+            content: ""
+            background: url("../imgs/decor-course.svg") no-repeat
+            background-size: contain
+            position: absolute
+            left: 0
+            bottom: 0
+            width: 100%
+            height: 800px
+            z-index: 10
+            @include mobile-s
+                width: 0
+        article
+            overflow: hidden
+
+            border: 3px solid $text-color
+            header
+                color: $block-color-bg
+                padding: 15px
+
+.course-partner
+    .row
+        p
+            margin-bottom: 30px
+
+.course-success
+    width: 100%
+    height: 100%
+    background: url("../imgs/fon.png") no-repeat
+    background-size: 100% 100%
+
+//// Company /////
+
+.company-content
+    h1
+        font-size: clamp(2rem, 5vw, 6rem)
+        margin-bottom: 10px
+
+.companys
+    background: $block-color-bg
+
+.be-partner
+    .form
+        width: 100%
+        background: $white
+        article
+            padding: 0
+            header
+                text-align: start
+                letter-spacing: 0
+                h3
+                    font-weight: 600
+                    color: $block-color-bg
+            .button
+                display: flex
+                justify-content: flex-end
+                button
+                    width: min-content
+                    @include mobile-s
+                        width: 100%
+
+    .be-partner__bg
+        background: url("../imgs/be-partner.png") no-repeat
+        width: 100%
+        height: 100%
+        background-size: 100% 100%
+
+        @include mobile-s
+            display: none
+
+//// Legal-info ////
+
+.legal-info-main
+    margin-bottom: -100px
+
+    h1
+        font-size: clamp(1.875rem, 5vw, 6rem)
+        margin-bottom: 10px
+
+//// requisites ////
+
+.requisites
+    h2
+        font-size: clamp(1.875rem, 5vw, 3.75rem)
+
+    p
+        font-size: clamp(.75rem, 5vw, 1.125rem)
+        font-weight: 500
