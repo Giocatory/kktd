@@ -6,3 +6,6 @@ def index(request):
 
 def about(request):
     return render(request, 'html/about.html')
+
+def local_acts(request):
+    return render(request, 'html/local_acts.html')

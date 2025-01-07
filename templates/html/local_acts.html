@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О нас</title>
+    <title>Документы и локальные акты</title>
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}"> 
@@ -57,7 +57,7 @@
                                         aria-expanded="false">Колледж</button>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="{% url 'about' %}">О нас</a></li>
-                                        <li><a class="dropdown-item" href="#">Локальные акты</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'local_acts' %}">Локальные акты</a></li>
                                         <li><a class="dropdown-item" href="#">Вакансии</a></li>
                                         <li><a class="dropdown-item" href="#">Администрация</a></li>
                                         <li><a class="dropdown-item" href="#">Преподаватели</a></li>
@@ -218,7 +218,7 @@
             <div class="content">
                 <div class="row">
                     <h1 class="font-bold uppercase">
-                        Казанский колледж технологии и дизайна<br><span class="text-blue-600">Казань 2025</span>
+                        Локальные акты и документы<br><span class="text-blue-600">Казань 2025</span>
                     </h1>
                 </div>
             </div>
@@ -227,85 +227,225 @@
     <main>
         <section class="requisites">
             <div class="container py-14">
-                <header>
-                    <h2 class="font-semibold uppercase">О нас
-                    </h2>
-                </header>
                 <article>
-                    <div class="flex justify-between py-4">
-                        <div class="flex flex-col lg:flex-row gap-2 justify-between w-full lg:w-5/6">
-                            <p>Здание образовательной организации, расположенное на живописном берегу озера Кабан, 
-                                в историческом центре Казани, на территории экскурсионной зоны «Старо-татарская слобода», 
-                                по адресу: <b>ул.Шигабутдина Марджани,д.26</b>, в 2024 году отметило 152 лет со дня постройки. 
-                                Оно было возведено по проекту архитектора Владимира Бечко-Друзина как учительская семинария для инородцев (1872-1918).
-                                <br><br>
-                                <b>Современный колледж</b> — это уважаемое учебное заведение, которое пользуется известностью не только в Татарстане, но в соседних регионах и в России. 
-                                За время существования колледж ни разу не менял профиль подготовки кадров. Это единственное в России учебное заведение, готовящее кадры для всех подотраслей
-                                 легкой промышленности, а также единственные – по подготовке кадров мехового и валяльно-войлочного направления.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex justify-between py-4">
-                        <div class="flex flex-col lg:flex-row gap-2 justify-between w-full lg:w-5/6">
-                            <h2 class="font-semibold uppercase">Основные сведения:</h2>
-                        </div>
-                    </div>
+                    <h2 class="font-semibold uppercase">Документы</h2>
+                    <table class="table table-striped table-hover table-bordered">
+                        <tr>
+                            <th style="text-align: center;">№</th><th style="text-align: center;">Название</th><th style="text-align: center;">Ссылка</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                УСТАВ ГОСУДАРСТВЕННОГО АВТОНОМНОГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАТЕЛЬНОГО УЧРЕЖДЕНИЯ «Казанский колледж технологии и дизайна»
+                            </td>
+                            <td>
+                                <a href=""><img src="{% static 'imgs/download-pdf.png' %}" width="50" alt=""></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                Положение о порядке разработки и утверждения образовательных программ
+                            </td>
+                            <td>
+                                <a href=""><img src="{% static 'imgs/download-pdf.png' %}" width="50" alt=""></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                Положение о режиме занятий обучающихся
+                            </td>
+                            <td>
+                                <a href=""><img src="{% static 'imgs/download-pdf.png' %}" width="50" alt=""></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                4
+                            </td>
+                            <td>
+                                Положение о порядке организации образовательной деятельноси по индивидуальным учебным планам, в том числе ускоренного обучения
+                            </td>
+                            <td>
+                                <a href=""><img src="{% static 'imgs/download-pdf.png' %}" width="50" alt=""></a>
+                            </td>
+                        </tr>
+                    </table>
+                    
                 </article>
                 <article class="flex flex-column divide-y-2 divide-black">
-                    <div class="flex justify-between py-4">
-                        <div class="flex flex-col lg:flex-row gap-2 justify-between w-full lg:w-4/6">
-                            <p>Полное название</p>
-                            <p>Казанский колледж технологии и дизайна</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-between py-4">
-                        <div class="flex flex-col lg:flex-row gap-2 justify-between w-full lg:w-4/6">
-                            <p>Фактический адресс</p>
-                            <p>420021, Россия, Республика Татарстан,<br>г. Казань, ул. Шигабутдина Марджани 26</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-between py-4">
-                        <div class="flex flex-col lg:flex-row gap-2 justify-between w-full lg:w-4/6">
-                            <p>Телефон</p>
-                            <p>8 (843) 293-42-12</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-between py-4">
-                        <div class="flex flex-col lg:flex-row gap-2 justify-between w-full lg:w-4/6">
-                            <p>Электронная почта</p>
-                            <p>ktlp1@yandex.ru</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-between py-4">
-                        <div class="flex flex-col lg:flex-row gap-2 justify-between w-full lg:w-4/6">
-                            <p>Директор</p>
-                            <p>8 (843) 293-42-12</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-between py-4">
-                        <div class="flex flex-col lg:flex-row gap-2 justify-between w-full lg:w-4/6">
-                            <p>Приемная комиссия</p>
-                            <p>8 (843) 293-00-84</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-between py-4">
-                        <div class="flex flex-col lg:flex-row gap-2 justify-between w-full lg:w-4/6">
-                            <p>Учебная часть</p>
-                            <p>8 (843) 293-01-84</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-between py-4">
-                        <div class="flex flex-col lg:flex-row gap-2 justify-between w-full lg:w-4/6">
-                            <p>Начальник отдела кадров</p>
-                            <p>8 (843) 293-42-31</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-between py-4">
-                        <div class="flex flex-col lg:flex-row gap-2 justify-between w-full lg:w-4/6">
-                            <p>Общественный транспорт</p>
-                            <p>остановка “Театр Галиаскара Камала”</p>
-                        </div>
-                    </div>
+                    <h2 class="font-semibold uppercase">Локальные АКТы:</h2>
+                        <table class="table table-striped table-hover table-bordered">
+                            <tr>
+                                <th style="text-align: center;">№</th><th style="text-align: center;">Название</th><th style="text-align: center;">Ссылка</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    1
+                                </td>
+                                <td>
+                                    УСТАВ ГОСУДАРСТВЕННОГО АВТОНОМНОГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАТЕЛЬНОГО УЧРЕЖДЕНИЯ «Казанский колледж технологии и дизайна»
+                                </td>
+                                <td>
+                                    <a href=""><img src="{% static 'imgs/download-pdf.png' %}" width="50" alt=""></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2
+                                </td>
+                                <td>
+                                    Положение о порядке разработки и утверждения образовательных программ
+                                </td>
+                                <td>
+                                    <a href=""><img src="{% static 'imgs/download-pdf.png' %}" width="50" alt=""></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    3
+                                </td>
+                                <td>
+                                    Положение о режиме занятий обучающихся
+                                </td>
+                                <td>
+                                    <a href=""><img src="{% static 'imgs/download-pdf.png' %}" width="50" alt=""></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    4
+                                </td>
+                                <td>
+                                    Положение о порядке организации образовательной деятельноси по индивидуальным учебным планам, в том числе ускоренного обучения
+                                </td>
+                                <td>
+                                    <a href=""><img src="{% static 'imgs/download-pdf.png' %}" width="50" alt=""></a>
+                                </td>
+                            </tr>
+                        </table>
+                </article>
+                <article class="flex flex-column divide-y-2 divide-black">
+                    <h2 class="font-semibold uppercase">Документы по охране труда</h2>
+                        <table class="table table-striped table-hover table-bordered">
+                            <tr>
+                                <th style="text-align: center;">№</th><th style="text-align: center;">Название</th><th style="text-align: center;">Ссылка</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    1
+                                </td>
+                                <td>
+                                    УСТАВ ГОСУДАРСТВЕННОГО АВТОНОМНОГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАТЕЛЬНОГО УЧРЕЖДЕНИЯ «Казанский колледж технологии и дизайна»
+                                </td>
+                                <td>
+                                    <a href=""><img src="{% static 'imgs/download-pdf.png' %}" width="50" alt=""></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2
+                                </td>
+                                <td>
+                                    Положение о порядке разработки и утверждения образовательных программ
+                                </td>
+                                <td>
+                                    <a href=""><img src="{% static 'imgs/download-pdf.png' %}" width="50" alt=""></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    3
+                                </td>
+                                <td>
+                                    Положение о режиме занятий обучающихся
+                                </td>
+                                <td>
+                                    <a href=""><img src="{% static 'imgs/download-pdf.png' %}" width="50" alt=""></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    4
+                                </td>
+                                <td>
+                                    Положение о порядке организации образовательной деятельноси по индивидуальным учебным планам, в том числе ускоренного обучения
+                                </td>
+                                <td>
+                                    <a href=""><img src="{% static 'imgs/download-pdf.png' %}" width="50" alt=""></a>
+                                </td>
+                            </tr>
+                        </table>
+                </article>
+                <article class="flex flex-column divide-y-2 divide-black">
+                    <h2 class="font-semibold uppercase">Полезные ссылки</h2>
+                        <table class="table table-striped table-hover table-bordered">
+                            <tr>
+                                <th style="text-align: center;">№</th><th style="text-align: center;">Название</th><th style="text-align: center;">Ссылка</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    1
+                                </td>
+                                <td>
+                                    ФЕДЕРАЛЬНАЯ СЛУЖБА ПО НАДЗОРУ В СФЕРЕ ОБРАЗОВАНИЯ И НАУКИ
+                                </td>
+                                <td>
+                                    <a href="http://obrnadzor.gov.ru/ru/">http://obrnadzor.gov.ru/ru/</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2
+                                </td>
+                                <td>
+                                    Министерство образования и науки ресублики татарстан
+                                </td>
+                                <td>
+                                    <a href="https://mon.tatarstan.ru/">https://mon.tatarstan.ru/</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    3
+                                </td>
+                                <td>
+                                    Союз предпринимателей текстильной и легкой промышленности республики татарстан
+                                </td>
+                                <td>
+                                    <a href="https://sptl.tatarstan.ru/">https://sptl.tatarstan.ru/></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    4
+                                </td>
+                                <td>
+                                    Министерство просвещения Российской Федерации
+                                </td>
+                                <td>
+                                    <a href="https://edu.gov.ru/">https://edu.gov.ru/</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    5
+                                </td>
+                                <td>
+                                    Федеральный институт развития образования
+                                </td>
+                                <td>
+                                    <a href="https://firo.ranepa.ru/spetsialistam-srednego-professionalnogo-obrazovaniya">https://firo.ranepa.ru/spetsialistam-srednego-professionalnogo-obrazovaniya</a>
+                                </td>
+                            </tr>
+                        </table>
                 </article>
             </div>
         </section>
